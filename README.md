@@ -64,9 +64,19 @@ cp frontend/.env.example frontend/.env
 
 ### 3. Inicie a infraestrutura (PostgreSQL, Redis, RabbitMQ)
 
+#### Desenvolvimento (apenas infra):
 ```bash
-docker-compose up -d
+# Sobe apenas PostgreSQL, Redis e RabbitMQ
+docker-compose up -d postgres redis rabbitmq
 ```
+
+#### Produção (aplicação completa):
+```bash
+# Sobe toda a stack (infra + backend + frontend)
+docker-compose up -d --build
+```
+
+**Nota:** No desenvolvimento, rode backend e frontend localmente para hot-reload. Em produção, use Docker Compose completo.
 
 ### 4. Instale as dependências
 
@@ -86,10 +96,19 @@ npm install
 
 ### 5. Execute as migrações do banco de dados
 
+#### Desenvolvimento (local):
 ```bash
 cd backend
 npm run migration:run
 ```
+
+#### Produção (Docker):
+```bash
+# Após o build dos containers
+docker exec -it task-manager-backend node run-migrations.js
+```
+
+**Nota:** As migrations criam automaticamente as tabelas `users` e `tasks` com todos os relacionamentos, índices e constraints necessários.
 
 ### 6. Inicie os serviços
 
