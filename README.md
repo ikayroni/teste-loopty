@@ -269,21 +269,6 @@ Documentação completa disponível em: `http://localhost:3001/api/docs`
 - **App Router vs Pages Router**: App Router é mais moderno mas tem menor adoção
 - **Monorepo vs Repos separados**: Monorepo facilita compartilhamento mas aumenta complexidade
 
-### Melhorias Futuras
-- [ ] Adicionar suporte a anexos nas tarefas (upload de arquivos)
-- [ ] Adicionar internacionalização (i18n) para múltiplos idiomas
-- [ ] Implementar SSO (Google, GitHub) para login social
-- [ ] Adicionar testes E2E com Playwright para fluxos completos
-- [ ] Configurar CI/CD com GitHub Actions para deploy automático
-- [ ] Adicionar rate limiting para proteção de API
-- [ ] Implementar audit logs para rastreabilidade
-- [ ] Adicionar notificações por email para tarefas urgentes
-- [ ] Implementar colaboração em tempo real (múltiplos usuários)
-- [ ] Adicionar tags customizáveis para categorização de tarefas
-
-## 📄 Licença
-
-MIT
 
 ## 👨‍💻 Autor
 
